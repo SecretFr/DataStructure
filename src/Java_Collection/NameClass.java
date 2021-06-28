@@ -47,13 +47,14 @@ public class NameClass implements Comparable<NameClass> {
 		System.out.println();
 		
 		//생성자에서 comparator 인터페이스 구현 시
-		Set<NameClass> treeSet1 = new TreeSet<>( (NameClass first, NameClass second)-> first.getFirstName().compareTo(second.getFirstName()) ); 
-	    treeSet1.add(new NameClass("박", "석진"));
-	    treeSet1.add(new NameClass("김", "석진"));
-	    treeSet1.add(new NameClass("차", "석진"));
-	    treeSet1.add(new NameClass("이", "석진"));
-	    for (NameClass nameClass : treeSet1) {
-	        System.out.println(nameClass.getFirstName()+nameClass.getSubName());
-	    }
+		Set<NameClass> treeSet1 = new TreeSet<>(
+				(NameClass first, NameClass second) -> first.getFirstName().compareTo(second.getFirstName()));
+		treeSet1.add(new NameClass("박", "석진"));
+		treeSet1.add(new NameClass("김", "석진"));
+		treeSet1.add(new NameClass("차", "석진"));
+		treeSet1.add(new NameClass("이", "석진"));
+		for (NameClass nameClass : treeSet1) {
+			System.out.println(nameClass.getFirstName() + nameClass.getSubName());
+		}
 	}
 }
