@@ -46,4 +46,31 @@ Set 컬렉션을 사용하는 목적은 순서가 필요없고, Set에 저장될
 #### LinkedHashSet
 * 입력된 순서대로 저장한다. Thread safe 하지 않다.
 
+### Map Collection
+Map 컬렉션을 사용하는 목적은 데이터를 저장할 때, key와 value 쌍으로 저장하고 싶을 때, 그리고, key를 중복 저장하고 싶지 않을 때입니다.
+
+* E put(K객체, E객체): 주어진 K객체를 키로, E객체를 값으로 컬렉션에 추가합니다. 성공 시 E객체를 반환합니다.
+* boolean containsKey(E객체): 컬렉션에 해당 객체를 key로하는 객체 존재 여부를 반환합니다.
+* boolean containsValue(E객체): 해당 객체를 값으로 하는 객체가 컬렉션에 존재하는지 반환합니다.
+* E get(V key): 컬렉션에서 해당 key객체를 찾아 값을 반환합니다.
+* boolean isEmpty(): 컬렉션이 비었는지 확인합니다.
+* set keySet(): 컬렉션의 모든 key객체를 Set객체에 담아 반환합니다.
+* int size(): 컬렉션의 길이를 반환합니다.
+* Collection values(): 저장된 모든 값을 Collection에 담아 반환합니다.
+* void clear(): 컬렉션의 모든 데이터를 제거합니다.
+* E remove(E key): 컬렉션에서 해당 key객체를 가지는 부분을 제거합니다.
+
+#### HashMap
+* HashMap의 key로 사용할 객체는 hashCode()와 equals() 메소드를 재정의해서 동등 객체가 될 조건을 정해야 합니다. String 객체의 경우 이런 부분이 잘 정의되어 있어 key값으로 많이 사용합니다. Thread safe하지 않습니다.
+
+#### HashTable
+* HashMap과 동일한 내부구조. 단, Thread safe하다.
+
+#### Properties
+* HashTable의 하위 클래스입니다. 특징은 key값을 String으로 제한한 클래스. 주 사용목적은 .properties파일을 읽을 때 사용
+
+#### TreeMap
+key값으로 오름차순 정렬되어 저장
+
+
 
