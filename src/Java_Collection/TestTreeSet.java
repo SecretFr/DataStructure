@@ -22,6 +22,8 @@ public class TestTreeSet {
 		System.out.println("Last ele: "+list.last());
 		System.out.println("Higher 12: "+list.higher(12));
 		System.out.println("Lower 12: "+list.lower(12));
+		System.out.println("contains 7: "+list.contains(7));
+		System.out.println("remove 7: "+list.remove(7));
 		
 		Iterator iter = list.iterator();
 		while(iter.hasNext()) {
