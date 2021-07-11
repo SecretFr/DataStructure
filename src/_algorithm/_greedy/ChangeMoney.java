@@ -1,5 +1,9 @@
 package _algorithm._greedy;
-
+/*
+화폐의 종류만큼 반복
+화폐의 종류 K개라면
+시간복잡도 O(K)
+*/
 public class ChangeMoney {
     public static void main(String[] args){
         int[] arr = {500, 100, 50, 10};
