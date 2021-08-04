@@ -16,7 +16,9 @@ public class MultiOrPlus {
         }
 
         Arrays.sort(arr);
-        int result = 1;
+        //만들어질 수 있는 가장 큰 수는 항상 20억 이하의 정수가 되도록 입력이 주어진다.
+        //따라서 long을 사용해야함
+        long result = 1;
         for(int i=0; i<arr.length; i++){
             if(arr[i] > 0){
                 result = result * arr[i];
