@@ -46,10 +46,10 @@ class Solution {
             //(음식시간, 음식번호) 형태로 우선순위 큐에 삽입
             pq.offer(new Food(food_times[i], i+1));
         }
-        while(!pq.isEmpty()){
-            Food food = pq.poll();
-            System.out.println("time: "+food.getTime()+" index: "+food.getIndex());
-        }
+        // while(!pq.isEmpty()){
+        //     Food food = pq.poll();
+        //     System.out.println("time: "+food.getTime()+" index: "+food.getIndex());
+        // }
 
         //먹기 위해 사용한 시간
         summary = 0;
