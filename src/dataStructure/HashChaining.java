@@ -76,6 +76,7 @@ public class HashChaining {
         mainObject.saveData("DaveLee", "101038293");
         mainObject.saveData("fun-coding", "222101038293");
         mainObject.saveData("fun-deep", "123");
-        System.out.println(mainObject.getData("fun-coding")); 
+        mainObject.saveData("fun-call", "123");
+        System.out.println(mainObject.getData("fun-call"));
     }
 }
