@@ -30,6 +30,58 @@ class SingleLinkedList<T>{
             node.next = new linkNode<T>(data);
         }
     }
+    public linkNode<T> search(T data){
+        if(this.head == null){
+            return null;
+        }
+        else{
+            linkNode<T> node = this.head;
+            while (node != null){
+                if(node.data == data){
+                    return node;
+                }
+                else{
+                    node = node.next;
+                }
+            }
+            return null;
+        }
+    }
+
+    public void addNodeInside(T data, T isData){
+        linkNode<T> searchNode = this.search(isData);
+        if(searchNode == null){
+            this.addNode(data);
+        }
+        else{
+            linkNode<T> nextNode = searchNode.next;
+            searchNode.next = new linkNode<T>(data);
+            searchNode.next.next = nextNode;
+        }
+    }
+
+    public boolean deleteNode(T isData){
+        if(this.head == null){
+            return false;
+        }
+        else{
+            linkNode<T> node = this.head;
+            if(node.data == isData){
+                this.head = this.head.next;
+                return true;
+            }
+            else{
+                while (node.next != null){
+                    if(node.next.data == isData){
+                        node.next = node.next.next;
+                        return true;
+                    }
+                    node = node.next;
+                }
+                return false;
+            }
+        }
+    }
 
     public void printAll(){
         if(head != null){
@@ -51,6 +103,9 @@ public class ArrayListMulCam {
         myLinkedList.addNode(3);
         myLinkedList.addNode(5);
         System.out.println(myLinkedList.head.next);
+//        myLinkedList.printAll();
+        myLinkedList.addNodeInside(10, 3);
+        myLinkedList.deleteNode(3);
         myLinkedList.printAll();
     }
 }
